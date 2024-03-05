@@ -1,0 +1,1 @@
+﻿SELECT id,playername,score,date FROM highscores ORDER BY score DESC LIMIT 100;

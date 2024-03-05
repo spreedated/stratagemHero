@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Helldivers2_Stratagem_Hero.ViewElements.Arrow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d:DataContext="{d:DesignInstance Type=local:Arrow, IsDesignTimeCreatable=True}"
+             xmlns:local="clr-namespace:Helldivers2_Stratagem_Hero.ViewElements"
+             mc:Ignorable="d" 
+             x:Name="me"
+             d:DesignHeight="84" d:DesignWidth="84">
+    <Grid d:Background="Green">
+        <Image x:Name="ImageArrow" Grid.Column="4" Height="84" Width="84" Source="{Binding ArrowUri, ElementName=me}">
+            <Image.RenderTransform>
+                <RotateTransform CenterX="42" CenterY="42" Angle="{Binding RotateAngle, ElementName=me}"/>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</UserControl>

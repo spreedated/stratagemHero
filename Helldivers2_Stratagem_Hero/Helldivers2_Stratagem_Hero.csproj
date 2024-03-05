@@ -1,0 +1,205 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyTitle>Helldivers 2 Stratagem Hero</AssemblyTitle>
+    <NoWarn>1701;1702;IDE0063</NoWarn>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <Version>0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\Insignia Regular.otf" />
+    <None Remove="Resources\Images\Arrows\arrow.png" />
+    <None Remove="Resources\Images\Arrows\arrow_down.png" />
+    <None Remove="Resources\Images\Arrows\arrow_left.png" />
+    <None Remove="Resources\Images\Arrows\arrow_pressed.png" />
+    <None Remove="Resources\Images\Arrows\arrow_right.png" />
+    <None Remove="Resources\Images\Arrows\arrow_up.png" />
+    <None Remove="Resources\Images\star.png" />
+    <None Remove="Resources\Images\Stratagems\AC-8icon.png" />
+    <None Remove="Resources\Images\Stratagems\APW-1icon.png" />
+    <None Remove="Resources\Images\Stratagems\ARC-3icon.png" />
+    <None Remove="Resources\Images\Stratagems\Autocannoasentryicon.png" />
+    <None Remove="Resources\Images\Stratagems\AX-AR-23icon.png" />
+    <None Remove="Resources\Images\Stratagems\AX-LAS-5icon.png" />
+    <None Remove="Resources\Images\Stratagems\B-1icon.png" />
+    <None Remove="Resources\Images\Stratagems\DeliverSSSDicon.png" />
+    <None Remove="Resources\Images\Stratagems\Eagle500icon.png" />
+    <None Remove="Resources\Images\Stratagems\EagleAirstrikeicon.png" />
+    <None Remove="Resources\Images\Stratagems\EagleClusterbombicon.png" />
+    <None Remove="Resources\Images\Stratagems\EagleNapalmicon.png" />
+    <None Remove="Resources\Images\Stratagems\EagleRocketpodicon.png" />
+    <None Remove="Resources\Images\Stratagems\EagleSmokeicon.png" />
+    <None Remove="Resources\Images\Stratagems\EagleStrafingicon.png" />
+    <None Remove="Resources\Images\Stratagems\EAT-17icon.png" />
+    <None Remove="Resources\Images\Stratagems\EMSmortaricon.png" />
+    <None Remove="Resources\Images\Stratagems\FAF-14icon.png" />
+    <None Remove="Resources\Images\Stratagems\Fireminefieldicon.png" />
+    <None Remove="Resources\Images\Stratagems\FLAM-40icon.png" />
+    <None Remove="Resources\Images\Stratagems\Gatlingsentryicon.png" />
+    <None Remove="Resources\Images\Stratagems\GL-21icon.png" />
+    <None Remove="Resources\Images\Stratagems\GR-8icon.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Blank-Blue.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Blank-Gold+Triangles.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Blank-Gold.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Blank-Green.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Blank-Red.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Blank-Yellow.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Page-Eagle.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Page-Emplacement.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Page-Orbital.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Page-Packs.png" />
+    <None Remove="Resources\Images\Stratagems\HD2-Page-Weapon.png" />
+    <None Remove="Resources\Images\Stratagems\HD2_Eagle_Rearm_Icon.png" />
+    <None Remove="Resources\Images\Stratagems\HD2_Upload_Data_Icon.png" />
+    <None Remove="Resources\Images\Stratagems\HMGTurreticon.png" />
+    <None Remove="Resources\Images\Stratagems\IlluminationFlare.png" />
+    <None Remove="Resources\Images\Stratagems\LAS-98icon.png" />
+    <None Remove="Resources\Images\Stratagems\LIFT-850icon.png" />
+    <None Remove="Resources\Images\Stratagems\M-105icon.png" />
+    <None Remove="Resources\Images\Stratagems\MG-43icon.png" />
+    <None Remove="Resources\Images\Stratagems\MGsentryicon.png" />
+    <None Remove="Resources\Images\Stratagems\Minefieldicon.png" />
+    <None Remove="Resources\Images\Stratagems\Missilesentryicon.png" />
+    <None Remove="Resources\Images\Stratagems\Mortarsentryicon.png" />
+    <None Remove="Resources\Images\Stratagems\Orbital120icon.png" />
+    <None Remove="Resources\Images\Stratagems\Orbital380icon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalAirbursticon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalEMSicon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalGasicon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalGatlingicon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalLasericon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalPrecisionicon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalRailcannonicon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalSmokeicon.png" />
+    <None Remove="Resources\Images\Stratagems\OrbitalWalkingicon.png" />
+    <None Remove="Resources\Images\Stratagems\Reinforceicon.png" />
+    <None Remove="Resources\Images\Stratagems\ResupplyIcon.png" />
+    <None Remove="Resources\Images\Stratagems\RS-422icon.png" />
+    <None Remove="Resources\Images\Stratagems\Seismic_probe_icon.png" />
+    <None Remove="Resources\Images\Stratagems\SH-20icon.png" />
+    <None Remove="Resources\Images\Stratagems\SH-32icon.png" />
+    <None Remove="Resources\Images\Stratagems\Shieldrelayicon.png" />
+    <None Remove="Resources\Images\Stratagems\SOSicon.png" />
+    <None Remove="Resources\Images\Stratagems\Strat_NUX-223_Hellbomb_mk1.png" />
+    <None Remove="Resources\Images\Stratagems\Teslaicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\Stratagems\AC-8icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\APW-1icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\ARC-3icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Autocannoasentryicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\AX-AR-23icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\AX-LAS-5icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\B-1icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\DeliverSSSDicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Eagle500icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EagleAirstrikeicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EagleClusterbombicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EagleNapalmicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EagleRocketpodicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EagleSmokeicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EagleStrafingicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EAT-17icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\EMSmortaricon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\FAF-14icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Fireminefieldicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\FLAM-40icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Gatlingsentryicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\GL-21icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\GR-8icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Blank-Blue.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Blank-Gold+Triangles.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Blank-Gold.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Blank-Green.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Blank-Red.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Blank-Yellow.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Page-Eagle.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Page-Emplacement.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Page-Orbital.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Page-Packs.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2-Page-Weapon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2_Eagle_Rearm_Icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HD2_Upload_Data_Icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\HMGTurreticon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\IlluminationFlare.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\LAS-98icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\LIFT-850icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\M-105icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\MG-43icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\MGsentryicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Minefieldicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Missilesentryicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Mortarsentryicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Orbital120icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Orbital380icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalAirbursticon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalEMSicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalGasicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalGatlingicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalLasericon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalPrecisionicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalRailcannonicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalSmokeicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalWalkingicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Reinforceicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\ResupplyIcon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\RS-422icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Seismic_probe_icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\SH-20icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\SH-32icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Shieldrelayicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\SOSicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Strat_NUX-223_Hellbomb_mk1.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\Teslaicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Audio\Audio.csproj" />
+    <ProjectReference Include="..\Highscore\Highscore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="neXn.Lib.Wpf">
+      <HintPath>..\Libraries\neXn.Lib.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\Insignia Regular.otf" />
+    <Resource Include="Resources\Images\Arrows\arrow.png" />
+    <Resource Include="Resources\Images\Arrows\arrow_pressed.png" />
+    <Resource Include="Resources\Images\star.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Pages\GameOver.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\Playername.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\RoundEnd.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\RoundBegin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

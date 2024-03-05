@@ -1,0 +1,1 @@
+﻿SELECT id FROM highscores WHERE playername=@p AND score=@s AND date=@d LIMIT 1;

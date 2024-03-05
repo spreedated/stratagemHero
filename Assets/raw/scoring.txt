@@ -1,0 +1,27 @@
+strata per round
+
+r1 -> 6
+r2 -> 7
+r3 -> 8
+r4 -> 9
+
+---
+
+stratagems:
+
+3 -> 15
+4 -> 20
+5 -> 25
+6 -> 30
+7 -> 35
+
+---
+
+end round bonus
+
+round bonus 1 -> 75
+time -> progressbar in percent (integer)
+perfect -> 100 (removed when error)
+
+round bonus 2 -> 100
+round bonus 3 -> 125

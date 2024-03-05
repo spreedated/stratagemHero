@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>highscore.snk</AssemblyOriginatorKeyFile>
+    <Version>1.1.0</Version>
+    <NoWarn>1701;1702;IDE0063</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Sql\CreateBlankTable.sql" />
+    <None Remove="Sql\DoesExist.sql" />
+    <None Remove="Sql\DoesTableExist.sql" />
+    <None Remove="Sql\Insert.sql" />
+    <None Remove="Sql\Read100.sql" />
+    <None Remove="Sql\ReadEntryId.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CreateBlankTable.sql" />
+    <EmbeddedResource Include="Sql\Insert.sql" />
+    <EmbeddedResource Include="Sql\DoesExist.sql" />
+    <EmbeddedResource Include="Sql\ReadEntryId.sql" />
+    <EmbeddedResource Include="Sql\Read100.sql" />
+    <EmbeddedResource Include="Sql\DoesTableExist.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.2" />
+  </ItemGroup>
+
+</Project>

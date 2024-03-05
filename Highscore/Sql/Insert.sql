@@ -1,0 +1,1 @@
+﻿INSERT INTO highscores (playername, score, date) VALUES (@p, @s, @d);

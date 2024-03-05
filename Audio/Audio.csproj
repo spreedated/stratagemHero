@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>audio.snk</AssemblyOriginatorKeyFile>
+    <Version>1.0.1</Version>
+    <NoWarn>1701;1702;IDE0063</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Audiofiles\snd_effects\click1.mp3" />
+    <None Remove="Audiofiles\snd_effects\click2.mp3" />
+    <None Remove="Audiofiles\snd_effects\click_fail.mp3" />
+    <None Remove="Audiofiles\snd_effects\click_success.mp3" />
+    <None Remove="Audiofiles\snd_effects\round_lost.mp3" />
+    <None Remove="Audiofiles\snd_effects\round_won.mp3" />
+    <None Remove="Audiofiles\snd_effects\round_won_alternative.mp3" />
+    <None Remove="Audiofiles\snd_music\dropzone_loadout_theme.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Audiofiles\snd_effects\click1.mp3" />
+    <EmbeddedResource Include="Audiofiles\snd_effects\click2.mp3" />
+    <EmbeddedResource Include="Audiofiles\snd_effects\click_fail.mp3" />
+    <EmbeddedResource Include="Audiofiles\snd_effects\click_success.mp3" />
+    <EmbeddedResource Include="Audiofiles\snd_effects\round_lost.mp3" />
+    <EmbeddedResource Include="Audiofiles\snd_effects\round_won.mp3" />
+    <EmbeddedResource Include="Audiofiles\snd_effects\round_won_alternative.mp3" />
+    <EmbeddedResource Include="Audiofiles\snd_music\dropzone_loadout_theme.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+</Project>

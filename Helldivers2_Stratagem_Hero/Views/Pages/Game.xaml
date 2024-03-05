@@ -1,0 +1,147 @@
+﻿<Page x:Class="Helldivers2_Stratagem_Hero.Views.Pages.Game"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d:DataContext="{d:DesignInstance Type=local:Game}"
+      xmlns:ve="clr-namespace:Helldivers2_Stratagem_Hero.ViewElements"
+      xmlns:vl="clr-namespace:Helldivers2_Stratagem_Hero.ViewLogic"
+      xmlns:local="clr-namespace:Helldivers2_Stratagem_Hero.Views.Pages"
+      xmlns:logic="clr-namespace:Helldivers2_Stratagem_Hero.Logic"
+      mc:Ignorable="d" 
+      d:DesignHeight="372" d:DesignWidth="920"
+      Title="Game">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="140"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Round -->
+        <Grid Grid.Column="0">
+            <StackPanel>
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="Round" FontSize="24"/>
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="{Binding DisplayRound, Mode=OneWay}" d:Text="20" Foreground="{StaticResource Yellow}"/>
+            </StackPanel>
+        </Grid>
+        <!-- # ### #-->
+
+        <!-- Main -->
+        <Grid Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition />
+                    <RowDefinition Height="64"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="32"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="160"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" BorderThickness="5,5,5,0" d:Background="Red">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Setter Property="BorderBrush" Value="{StaticResource Yellow}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TimerBar, Converter={vl:IsDoubleBelow25Converter}}" Value="True">
+                                            <Setter Property="BorderBrush" Value="{StaticResource Red}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Image Source="{Binding CurrentStratagem.Icon, Converter={vl:ByteArrayToImageSourceConverter}}" Height="132" Width="132" />
+                        </Border>
+
+                        <Grid x:Name="StratagemPreview" Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <d:Canvas Grid.Column="0" Background="Red" Height="84" Width="84" />
+                            <d:Canvas Grid.Column="1" Background="Red" Height="84" Width="84" />
+                            <d:Canvas Grid.Column="2" Background="Red" Height="84" Width="84" />
+                            <d:Canvas Grid.Column="3" Background="Red" Height="84" Width="84" />
+                            <d:Canvas Grid.Column="4" Background="Red" Height="84" Width="84" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Canvas>
+                            <Canvas.Style>
+                                <Style TargetType="Canvas">
+                                    <Setter Property="Background" Value="{StaticResource Yellow}"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TimerBar, Converter={vl:IsDoubleBelow25Converter}}" Value="True">
+                                            <Setter Property="Background" Value="{StaticResource Red}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Canvas.Style>
+                        </Canvas>
+                        <TextBlock d:Text="SOME STRATAGEM" Text="{Binding CurrentStratagem.Name}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+                                    <Setter Property="Foreground" Value="#333333"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding TimerBar, Converter={vl:IsDoubleBelow25Converter}}" Value="True">
+                                            <Setter Property="Foreground" Value="{StaticResource White}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <StackPanel x:Name="StrataPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,12">
+                        <ve:Arrow Direction="Up" Margin="8,0,8,0" />
+                        <ve:Arrow Direction="Down" Margin="8,0,8,0" />
+                        <ve:Arrow Direction="Left" Margin="8,0,8,0" />
+                        <ve:Arrow Direction="Right" Margin="8,0,8,0" />
+                    </StackPanel>
+                </Grid>
+
+                <ProgressBar Grid.Row="2" Height="24" d:Value="80" Value="{Binding TimerBar, Mode=OneWay}" Minimum="0" Maximum="1000">
+                    <ProgressBar.Style>
+                        <Style TargetType="ProgressBar">
+                            <Setter Property="Background" Value="{StaticResource LightGrey}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Yellow}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding TimerBar, Converter={vl:IsDoubleBelow25Converter}}" Value="True">
+                                    <Setter Property="Foreground" Value="{StaticResource Red}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ProgressBar.Style>
+                </ProgressBar>
+            </Grid>
+        </Grid>
+        <!-- # ### #-->
+
+        <!-- Score -->
+        <Grid Grid.Column="2">
+            <StackPanel>
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="{Binding DisplayScore, Mode=OneWay}" d:Text="133337" Foreground="{StaticResource Yellow}"/>
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="Score" FontSize="24"/>
+                <Image Source="pack://application:,,,/resources/images/star.png" Height="84" Width="84" Margin="0,40,0,0" Visibility="{Binding IsPerfectRound, Converter={vl:BoolToVisibilityConverter}}" />
+            </StackPanel>
+        </Grid>
+        <!-- # ### #-->
+    </Grid>
+</Page>
