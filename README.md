@@ -1,3 +1,5 @@
+![](Assets/appicon.png)
+
 Stratagem Hero - from Helldivers 2
 ==================================
 
@@ -11,6 +13,16 @@ Your favorite game from Helldivers 2 is now available as a standalone game!
 - Local Highscores
 - No Gameengine, just plain WPF
 - Easy to use, hard to master
+
+---
+
+**Screenshots**
+
+![](Assets/screenshots/1.png)
+
+![](Assets/screenshots/2.png)
+
+![](Assets/screenshots/3.png)
 
 ---
 
