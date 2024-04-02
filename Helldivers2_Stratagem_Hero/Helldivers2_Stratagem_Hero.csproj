@@ -10,7 +10,7 @@
     <NoWarn>1701;1702;IDE0063</NoWarn>
     <ApplicationIcon>appicon.ico</ApplicationIcon>
     <PublishReadyToRun>true</PublishReadyToRun>
-    <Version>0.1</Version>
+    <Version>0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -63,6 +63,7 @@
     <None Remove="Resources\Images\Stratagems\LAS-98icon.png" />
     <None Remove="Resources\Images\Stratagems\LIFT-850icon.png" />
     <None Remove="Resources\Images\Stratagems\M-105icon.png" />
+    <None Remove="Resources\Images\Stratagems\MG-206.png" />
     <None Remove="Resources\Images\Stratagems\MG-43icon.png" />
     <None Remove="Resources\Images\Stratagems\MGsentryicon.png" />
     <None Remove="Resources\Images\Stratagems\Minefieldicon.png" />
@@ -79,6 +80,8 @@
     <None Remove="Resources\Images\Stratagems\OrbitalRailcannonicon.png" />
     <None Remove="Resources\Images\Stratagems\OrbitalSmokeicon.png" />
     <None Remove="Resources\Images\Stratagems\OrbitalWalkingicon.png" />
+    <None Remove="Resources\Images\Stratagems\PatriotExosuit.png" />
+    <None Remove="Resources\Images\Stratagems\QuasarCannon.png" />
     <None Remove="Resources\Images\Stratagems\Reinforceicon.png" />
     <None Remove="Resources\Images\Stratagems\ResupplyIcon.png" />
     <None Remove="Resources\Images\Stratagems\RS-422icon.png" />
@@ -137,6 +140,7 @@
     <EmbeddedResource Include="Resources\Images\Stratagems\LAS-98icon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\LIFT-850icon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\M-105icon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\MG-206.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\MG-43icon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\MGsentryicon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\Minefieldicon.png" />
@@ -153,6 +157,8 @@
     <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalRailcannonicon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalSmokeicon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\OrbitalWalkingicon.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\PatriotExosuit.png" />
+    <EmbeddedResource Include="Resources\Images\Stratagems\QuasarCannon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\Reinforceicon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\ResupplyIcon.png" />
     <EmbeddedResource Include="Resources\Images\Stratagems\RS-422icon.png" />
