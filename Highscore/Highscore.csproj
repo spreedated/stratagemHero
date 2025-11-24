@@ -8,6 +8,7 @@
     <AssemblyOriginatorKeyFile>highscore.snk</AssemblyOriginatorKeyFile>
     <Version>1.1.0</Version>
     <NoWarn>1701;1702;IDE0063</NoWarn>
+    <Authors>Dante Wackermann</Authors>
   </PropertyGroup>
 
   <ItemGroup>

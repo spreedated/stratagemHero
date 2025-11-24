@@ -9,6 +9,7 @@
     <Version>0.2.0</Version>
     <AssemblyTitle>Helldivers 2 Stratagem Hero</AssemblyTitle>
     <NoWarn>1701;1702;IDE0063</NoWarn>
+    <Authors>Dante Wackermann</Authors>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>

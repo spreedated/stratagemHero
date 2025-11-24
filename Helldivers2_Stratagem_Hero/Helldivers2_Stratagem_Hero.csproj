@@ -12,6 +12,7 @@
     <PublishReadyToRun>true</PublishReadyToRun>
     <Version>0.1</Version>
     <LangVersion>latest</LangVersion>
+    <Authors>Dante Wackermann</Authors>
   </PropertyGroup>
 
   <ItemGroup>
