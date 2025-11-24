@@ -65,7 +65,7 @@ namespace Audio
                             Name = soundname,
                             Payload = new byte[s.Length]
                         });
-                        s.Read(Effects[^1].Payload, 0, Effects[^1].Payload.Length);
+                        s.ReadExactly(Effects[^1].Payload, 0, Effects[^1].Payload.Length);
                     }
 
                     if (snd.Contains("snd_music"))
@@ -75,7 +75,7 @@ namespace Audio
                             Name = soundname,
                             Payload = new byte[s.Length]
                         });
-                        s.Read(Musics.Last.Value.Payload, 0, Musics.Last.Value.Payload.Length);
+                        s.ReadExactly(Musics.Last.Value.Payload, 0, Musics.Last.Value.Payload.Length);
                     }
                 }
 

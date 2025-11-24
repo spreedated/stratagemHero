@@ -36,7 +36,7 @@ namespace Helldivers2_Stratagem_Hero.Logic
                 }
 
                 byte[] buffer = new byte[s.Length];
-                s.Read(buffer, 0, buffer.Length);
+                s.ReadExactly(buffer, 0, buffer.Length);
                 return buffer;
             }
         }
