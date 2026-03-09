@@ -20,7 +20,7 @@ namespace Helldivers2_Stratagem_Hero.Views.Pages
     [ObservableObject]
     public partial class Game : Page, IImplementKeys, IViewManagerPage
     {
-        private readonly Timer gameTimer;
+        private Timer gameTimer;
         private readonly List<Stratagem> stratagemList = [];
 
         private readonly Queue<Stratagem> roundStratagem = [];
@@ -43,16 +43,17 @@ namespace Helldivers2_Stratagem_Hero.Views.Pages
         private void LoadStratagems()
         {
             this.stratagemList.Clear();
-            Assembly a = typeof(Game).Assembly;
-            a.GetTypes().Where(x => x.IsSubclassOf(typeof(Stratagem)))
-                .ToList()
-                .ForEach(x => this.stratagemList.Add((Stratagem)Activator.CreateInstance(x)));
+
+            foreach (Type item in Globals.Assembly.GetTypes().Where(x => x.IsSubclassOf(typeof(Stratagem))))
+            {
+                this.stratagemList.Add((Stratagem)Activator.CreateInstance(item));
+            }
         }
 
         private void RandomlySelectRoundStratagems()
         {
             this.roundStratagem.Clear();
-            Random r = new(BitConverter.ToInt32(Guid.NewGuid().ToByteArray()));
+            Random r = Random.Shared;
 
             for (int i = 0; i < (6 + Currentround); i++)
             {
@@ -151,26 +152,6 @@ namespace Helldivers2_Stratagem_Hero.Views.Pages
         {
             this.InitializeComponent();
             this.DataContext = this;
-            this.LoadStratagems();
-
-            this.gameTimer = new()
-            {
-                Interval = TimeSpan.FromMilliseconds(20).TotalMilliseconds
-            };
-
-            this.gameTimer.Elapsed += (o, e) =>
-            {
-                ForceUiUpdate(this.Dispatcher);
-
-                this.TimerBar -= 0.7d;
-
-                if (this.TimerBar <= 0d)
-                {
-                    this.gameTimer.Stop();
-                    Globals.AudioManager.PlaySoundEffect("round_lost");
-                    Globals.ViewManager.ChangePage("playername");
-                }
-            };
         }
 
         public void OnPageViewed()
@@ -205,7 +186,7 @@ namespace Helldivers2_Stratagem_Hero.Views.Pages
             if (this.CurrentStratagem.Keys.All(x => x.IsHeld))
             {
                 this.CurrentStratagem.Reset();
-                this.TimerBar += 15d;
+                this.TimerBar += 90d;
                 this.UpdateScore(this.CurrentStratagem.Score);
                 this.SelectNextStratagem();
                 Globals.AudioManager.PlaySoundEffect("click_success");
@@ -216,6 +197,30 @@ namespace Helldivers2_Stratagem_Hero.Views.Pages
             }
 
             this.UpdateStrataPanel();
+        }
+
+        private void Page_Initialized(object sender, EventArgs e)
+        {
+            this.LoadStratagems();
+
+            this.gameTimer = new()
+            {
+                Interval = TimeSpan.FromMilliseconds(10).TotalMilliseconds
+            };
+
+            this.gameTimer.Elapsed += (o, e) =>
+            {
+                ForceUiUpdate(this.Dispatcher);
+
+                this.TimerBar -= 1d;
+
+                if (this.TimerBar <= 0d)
+                {
+                    this.gameTimer.Stop();
+                    Globals.AudioManager.PlaySoundEffect("round_lost");
+                    Globals.ViewManager.ChangePage("playername");
+                }
+            };
         }
     }
 }

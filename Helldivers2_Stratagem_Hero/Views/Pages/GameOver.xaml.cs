@@ -40,10 +40,7 @@ namespace Helldivers2_Stratagem_Hero.Views.Pages
 
         public void OnPageViewed()
         {
-            Task.Run(async () =>
-            {
-                await this.RetrieveHighscoreList(Globals.Score);
-            });
+            this.RetrieveHighscoreList(Globals.Score).ConfigureAwait(false);
             this.DisplayScore = Globals.Score;
             this.displayTimer.Start();
 

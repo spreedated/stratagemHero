@@ -16,6 +16,9 @@ namespace Helldivers2_Stratagem_Hero.Views
 #if DEBUG
             DebugWindow debug = new();
             debug.Show();
+
+            Stratagems.Core s = new();
+            s.Load().Wait();
 #endif
         }
 

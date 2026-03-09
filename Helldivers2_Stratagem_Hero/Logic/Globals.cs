@@ -1,6 +1,7 @@
 ﻿using Audio;
 using Helldivers2_Stratagem_Hero.ViewLogic;
 using neXn.Lib.ViewLogic;
+using System.Reflection;
 
 namespace Helldivers2_Stratagem_Hero.Logic
 {
@@ -12,5 +13,6 @@ namespace Helldivers2_Stratagem_Hero.Logic
         public static int Score { get; set; }
         public static int Currentround { get; set; } = 1;
         public static string Playername { get; set; }
+        public static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
     }
 }

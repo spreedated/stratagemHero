@@ -55,6 +55,12 @@ namespace Helldivers2_Stratagem_Hero.ViewLogic
             if (Globals.ViewManager.PageTitle.Equals("game", StringComparison.InvariantCultureIgnoreCase))
             {
                 ((IImplementKeys)Globals.ViewManager.GetCurrentPage()).KeyPressed(direction);
+
+                Random rnd = new();
+                double rs = rnd.NextDouble();
+
+                Globals.AudioManager.PlaySoundEffect(rs <= 0.5d ? "click1" : "click2");
+
                 return true;
             }
             return false;
@@ -140,11 +146,6 @@ namespace Helldivers2_Stratagem_Hero.ViewLogic
                     value();
                 }
             }
-
-            Random rnd = new();
-            double rs = rnd.NextDouble();
-
-            Globals.AudioManager.PlaySoundEffect(rs <= 0.5d ? "click1" : "click2");
         }
 
         public void KeyUp(KeyEventArgs e)

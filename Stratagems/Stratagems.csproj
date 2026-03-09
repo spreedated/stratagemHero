@@ -1,0 +1,156 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>stratagems.snk</AssemblyOriginatorKeyFile>
+    <Version>1.0.0</Version>
+    <NoWarn>1701;1702;IDE0063</NoWarn>
+    <Authors>Dante Wackermann</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\stratagems.json" />
+    <None Remove="Images\AC-8icon.png" />
+    <None Remove="Images\APW-1icon.png" />
+    <None Remove="Images\ARC-3icon.png" />
+    <None Remove="Images\Autocannoasentryicon.png" />
+    <None Remove="Images\AX-AR-23icon.png" />
+    <None Remove="Images\AX-LAS-5icon.png" />
+    <None Remove="Images\B-1icon.png" />
+    <None Remove="Images\DeliverSSSDicon.png" />
+    <None Remove="Images\Eagle500icon.png" />
+    <None Remove="Images\EagleAirstrikeicon.png" />
+    <None Remove="Images\EagleClusterbombicon.png" />
+    <None Remove="Images\EagleNapalmicon.png" />
+    <None Remove="Images\EagleRocketpodicon.png" />
+    <None Remove="Images\EagleSmokeicon.png" />
+    <None Remove="Images\EagleStrafingicon.png" />
+    <None Remove="Images\EAT-17icon.png" />
+    <None Remove="Images\EMSmortaricon.png" />
+    <None Remove="Images\FAF-14icon.png" />
+    <None Remove="Images\Fireminefieldicon.png" />
+    <None Remove="Images\FLAM-40icon.png" />
+    <None Remove="Images\Gatlingsentryicon.png" />
+    <None Remove="Images\GL-21icon.png" />
+    <None Remove="Images\GR-8icon.png" />
+    <None Remove="Images\HD2-Blank-Blue.png" />
+    <None Remove="Images\HD2-Blank-Gold+Triangles.png" />
+    <None Remove="Images\HD2-Blank-Gold.png" />
+    <None Remove="Images\HD2-Blank-Green.png" />
+    <None Remove="Images\HD2-Blank-Red.png" />
+    <None Remove="Images\HD2-Blank-Yellow.png" />
+    <None Remove="Images\HD2-Page-Eagle.png" />
+    <None Remove="Images\HD2-Page-Emplacement.png" />
+    <None Remove="Images\HD2-Page-Orbital.png" />
+    <None Remove="Images\HD2-Page-Packs.png" />
+    <None Remove="Images\HD2-Page-Weapon.png" />
+    <None Remove="Images\HD2_Eagle_Rearm_Icon.png" />
+    <None Remove="Images\HD2_Upload_Data_Icon.png" />
+    <None Remove="Images\HMGTurreticon.png" />
+    <None Remove="Images\IlluminationFlare.png" />
+    <None Remove="Images\LAS-98icon.png" />
+    <None Remove="Images\LIFT-850icon.png" />
+    <None Remove="Images\M-105icon.png" />
+    <None Remove="Images\MG-43icon.png" />
+    <None Remove="Images\MGsentryicon.png" />
+    <None Remove="Images\Minefieldicon.png" />
+    <None Remove="Images\Missilesentryicon.png" />
+    <None Remove="Images\Mortarsentryicon.png" />
+    <None Remove="Images\Orbital120icon.png" />
+    <None Remove="Images\Orbital380icon.png" />
+    <None Remove="Images\OrbitalAirbursticon.png" />
+    <None Remove="Images\OrbitalEMSicon.png" />
+    <None Remove="Images\OrbitalGasicon.png" />
+    <None Remove="Images\OrbitalGatlingicon.png" />
+    <None Remove="Images\OrbitalLasericon.png" />
+    <None Remove="Images\OrbitalPrecisionicon.png" />
+    <None Remove="Images\OrbitalRailcannonicon.png" />
+    <None Remove="Images\OrbitalSmokeicon.png" />
+    <None Remove="Images\OrbitalWalkingicon.png" />
+    <None Remove="Images\Reinforceicon.png" />
+    <None Remove="Images\ResupplyIcon.png" />
+    <None Remove="Images\RS-422icon.png" />
+    <None Remove="Images\Seismic_probe_icon.png" />
+    <None Remove="Images\SH-20icon.png" />
+    <None Remove="Images\SH-32icon.png" />
+    <None Remove="Images\Shieldrelayicon.png" />
+    <None Remove="Images\SOSicon.png" />
+    <None Remove="Images\Strat_NUX-223_Hellbomb_mk1.png" />
+    <None Remove="Images\Teslaicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\stratagems.json" />
+    <EmbeddedResource Include="Images\AC-8icon.png" />
+    <EmbeddedResource Include="Images\APW-1icon.png" />
+    <EmbeddedResource Include="Images\ARC-3icon.png" />
+    <EmbeddedResource Include="Images\Autocannoasentryicon.png" />
+    <EmbeddedResource Include="Images\AX-AR-23icon.png" />
+    <EmbeddedResource Include="Images\AX-LAS-5icon.png" />
+    <EmbeddedResource Include="Images\B-1icon.png" />
+    <EmbeddedResource Include="Images\DeliverSSSDicon.png" />
+    <EmbeddedResource Include="Images\Eagle500icon.png" />
+    <EmbeddedResource Include="Images\EagleAirstrikeicon.png" />
+    <EmbeddedResource Include="Images\EagleClusterbombicon.png" />
+    <EmbeddedResource Include="Images\EagleNapalmicon.png" />
+    <EmbeddedResource Include="Images\EagleRocketpodicon.png" />
+    <EmbeddedResource Include="Images\EagleSmokeicon.png" />
+    <EmbeddedResource Include="Images\EagleStrafingicon.png" />
+    <EmbeddedResource Include="Images\EAT-17icon.png" />
+    <EmbeddedResource Include="Images\EMSmortaricon.png" />
+    <EmbeddedResource Include="Images\FAF-14icon.png" />
+    <EmbeddedResource Include="Images\Fireminefieldicon.png" />
+    <EmbeddedResource Include="Images\FLAM-40icon.png" />
+    <EmbeddedResource Include="Images\Gatlingsentryicon.png" />
+    <EmbeddedResource Include="Images\GL-21icon.png" />
+    <EmbeddedResource Include="Images\GR-8icon.png" />
+    <EmbeddedResource Include="Images\HD2-Blank-Blue.png" />
+    <EmbeddedResource Include="Images\HD2-Blank-Gold+Triangles.png" />
+    <EmbeddedResource Include="Images\HD2-Blank-Gold.png" />
+    <EmbeddedResource Include="Images\HD2-Blank-Green.png" />
+    <EmbeddedResource Include="Images\HD2-Blank-Red.png" />
+    <EmbeddedResource Include="Images\HD2-Blank-Yellow.png" />
+    <EmbeddedResource Include="Images\HD2-Page-Eagle.png" />
+    <EmbeddedResource Include="Images\HD2-Page-Emplacement.png" />
+    <EmbeddedResource Include="Images\HD2-Page-Orbital.png" />
+    <EmbeddedResource Include="Images\HD2-Page-Packs.png" />
+    <EmbeddedResource Include="Images\HD2-Page-Weapon.png" />
+    <EmbeddedResource Include="Images\HD2_Eagle_Rearm_Icon.png" />
+    <EmbeddedResource Include="Images\HD2_Upload_Data_Icon.png" />
+    <EmbeddedResource Include="Images\HMGTurreticon.png" />
+    <EmbeddedResource Include="Images\IlluminationFlare.png" />
+    <EmbeddedResource Include="Images\LAS-98icon.png" />
+    <EmbeddedResource Include="Images\LIFT-850icon.png" />
+    <EmbeddedResource Include="Images\M-105icon.png" />
+    <EmbeddedResource Include="Images\MG-43icon.png" />
+    <EmbeddedResource Include="Images\MGsentryicon.png" />
+    <EmbeddedResource Include="Images\Minefieldicon.png" />
+    <EmbeddedResource Include="Images\Missilesentryicon.png" />
+    <EmbeddedResource Include="Images\Mortarsentryicon.png" />
+    <EmbeddedResource Include="Images\Orbital120icon.png" />
+    <EmbeddedResource Include="Images\Orbital380icon.png" />
+    <EmbeddedResource Include="Images\OrbitalAirbursticon.png" />
+    <EmbeddedResource Include="Images\OrbitalEMSicon.png" />
+    <EmbeddedResource Include="Images\OrbitalGasicon.png" />
+    <EmbeddedResource Include="Images\OrbitalGatlingicon.png" />
+    <EmbeddedResource Include="Images\OrbitalLasericon.png" />
+    <EmbeddedResource Include="Images\OrbitalPrecisionicon.png" />
+    <EmbeddedResource Include="Images\OrbitalRailcannonicon.png" />
+    <EmbeddedResource Include="Images\OrbitalSmokeicon.png" />
+    <EmbeddedResource Include="Images\OrbitalWalkingicon.png" />
+    <EmbeddedResource Include="Images\Reinforceicon.png" />
+    <EmbeddedResource Include="Images\ResupplyIcon.png" />
+    <EmbeddedResource Include="Images\RS-422icon.png" />
+    <EmbeddedResource Include="Images\Seismic_probe_icon.png" />
+    <EmbeddedResource Include="Images\SH-20icon.png" />
+    <EmbeddedResource Include="Images\SH-32icon.png" />
+    <EmbeddedResource Include="Images\Shieldrelayicon.png" />
+    <EmbeddedResource Include="Images\SOSicon.png" />
+    <EmbeddedResource Include="Images\Strat_NUX-223_Hellbomb_mk1.png" />
+    <EmbeddedResource Include="Images\Teslaicon.png" />
+  </ItemGroup>
+
+</Project>

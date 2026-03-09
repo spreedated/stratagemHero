@@ -1,0 +1,18 @@
+﻿{
+  "date": "2025-11-25",
+  "stratagems": [
+    {
+      "name": "Eagle 110MM Rocket Pods",
+      "description": "",
+      "cost": 0,
+      "cooldown": 0,
+      "icon": "Eagle500icon",
+      "keys": [
+        "Up",
+        "Right",
+        "Up",
+        "Left"
+      ]
+    }
+  ]
+}
